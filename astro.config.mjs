@@ -13,14 +13,13 @@ import cloudflare from "@astrojs/cloudflare"
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://apunts.pages.dev',
   integrations: [mdx(), sitemap()],
   markdown: {
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
   },
   root: './',
-  adapter: cloudflare(),
+  site: 'https://apunts.pages.dev',
   fonts: [
       {
           provider: fontProviders.local(),
