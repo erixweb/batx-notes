@@ -4,15 +4,16 @@ import BlogPost from '../../layouts/BlogPost.astro';
 import ContentTable from '../../components/ContentTable.astro';
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
-		params: { slug: post.id },
-		props: post,
-	}));
+  const posts = await getCollection('notes'); // <- mismo nombre
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: post,
+  }));
 }
-type Props = CollectionEntry<'blog'>;
 
-const post = Astro.props;
+type Props = CollectionEntry<'notes'>; // <- mismo nombre
+
+const post = Astro.props as Props;
 const { Content, headings } = await render(post);
 ---
 
