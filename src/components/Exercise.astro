@@ -1,0 +1,81 @@
+<div class="problem">
+    <h5 style="padding: 0px; margin: 0px;">EJERCICIO</h5>
+    <div class="problem-question">
+        <div>
+            <slot name="problem-question" />
+        </div>
+        <div style="padding-left: 16px;
+        height: fit-content;">
+            <button id="solution-btn">Solución</button>
+        </div>
+    </div>
+    <div id="problem-solution" style="display: none;">
+        <slot name="problem-solution" />
+    </div>
+</div>
+
+<style>
+.problem-question {
+    display: flex;
+    & span {
+        width: 100%;
+        margin-bottom: 0px;
+        & p {
+            margin-bottom: 0px;
+            max-width: fit-content;
+        }
+    }
+    & button {
+        padding: 6px 17px;
+        font-weight: bold;
+        border: 3px solid gray;
+        border-radius: 7px;
+        background-color: #f3f3f3;
+        cursor: pointer;     
+        transform: scale(1);
+        transition: 250ms;
+    }
+    & button:hover {
+        transform: scale(1.1);
+    }
+
+   
+}
+    
+#problem-solution {
+    border-left: 2px solid gray;
+    padding: 0px 12px;
+    color: green;
+}
+.problem p {
+    padding: 0px;  
+    margin: 0px;
+}
+</style>
+
+<script>
+const buttons = document.querySelectorAll("#solution-btn");
+buttons.forEach((btn) => {
+    // @ts-ignore
+    btn.addEventListener("click", showAnswer);
+});
+
+function showAnswer(e: MouseEvent) {
+
+    const target = e.target as HTMLElement;
+    const problem = target.closest(".problem");
+    if (!problem) return;
+
+    const $solutionElement = problem.querySelector("#problem-solution") as HTMLElement | null;
+    if (!$solutionElement) return;
+
+    const display = $solutionElement.style.display
+
+    if (display == "block") {
+        $solutionElement.style.display = "none";
+        return
+    } 
+
+    $solutionElement.style.display = "block"
+}
+</script>

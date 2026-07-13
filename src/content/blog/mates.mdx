@@ -1,0 +1,223 @@
+---
+title: 'Mates: II Batx'
+description: 'Tewefewfwemas: MRU, MRUA, Tiro parabólico, Caída libre, MCU, MCUA'
+pubDate: '2026'
+heroImage: '../../assets/blog-placeholder-5.jpg'
+---
+
+## Matrices
+
+### Representación de un sistema de ecuaciones como matriz.
+
+
+$$ 
+\begin{cases}
+    x+2y = 3 \\
+    3x+4y = 8
+\end{cases}
+\rightarrow
+\left[
+\begin{array}{cc|c}
+1 & 2 & 3 \\
+3 & 4 & 8
+\end{array}
+\right]
+$$
+
+Las matrices se representan en filas y columnas. Las dimensiones son $filas \times columnas$.
+
+$$
+A 
+=
+\begin{pmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22} \\
+\end{pmatrix}
+$$
+
+#### EJEMPLO NUMÉRICO
+
+El siguiente ejemplo muestra una matriz con 2 filas y 2 columnas, por tanto se trata de una matriz con dimensiones 2x2.
+
+$$
+A 
+=
+\begin{pmatrix}
+6 & 7 \\
+3 & 3 \\
+\end{pmatrix}
+$$
+
+
+
+### Suma de matrices
+
+Para sumar matrices ambas **deben tener las mismas dimensiones**: una matriz 3x2 solo se puede sumar con otra 3x2.
+
+
+$$
+A + B = 
+\begin{pmatrix}
+a_{11} + b_{11} & a_{12} + b_{12} \\
+a_{21} + b_{21} & a_{22} + b_{22} \\
+a_{31} + b_{31} & a_{32} + b_{32}
+\end{pmatrix}
+$$
+
+$$
+A + B = 
+\begin{pmatrix}
+10 & 14 \\
+10 & 10 \\ 
+9 & 9
+\end{pmatrix}
+$$
+
+### Producto de una matriz con un escalar
+
+El producto de una matriz *A* por un escalar *k*, es el resultado de multiplicar cada fila y columna por este número escalar.
+
+$$
+A · k =
+\begin{pmatrix}
+a_{11} · k & a_{12} · k \\
+a_{21} · k & a_{22} · k
+\end{pmatrix}
+$$
+
+#### EJEMPLO NUMÉRICO
+
+$$
+A =
+\begin{pmatrix}
+2 & 3 \\
+4 & 4
+\end{pmatrix} \ \ 
+k = 5 \\
+$$
+$$
+A · 5 =
+\begin{pmatrix}
+10 & 15 \\
+20 & 20
+\end{pmatrix}
+$$
+
+### Producto de una matriz con otra matriz
+
+Ejemplo con matriz 2x2
+
+$$
+A = 
+\begin{pmatrix}
+a_{11} && a_{12} \\
+a_{21} && a_{22}
+\end{pmatrix} \
+B = 
+\begin{pmatrix}
+b_{11} && b_{12} \\
+b_{21} && b_{22}
+\end{pmatrix} 
+$$
+
+#### Paso 1
+
+$$
+\begin{pmatrix}
+\color{blue}{a_{11}} && \color{blue}{a_{12}} \\
+a_{21} && a_{22}
+\end{pmatrix}
+
+\times 
+
+\begin{pmatrix}
+\color{blue}{b_{11}} && b_{12} \\
+\color{blue}{b_{21}} && b_{22}
+\end{pmatrix}
+
+=
+
+\begin{pmatrix}
+\color{blue}{a_{11} · b_{11} + a_{12} · b_{21}} && ... \\
+... && ...
+\end{pmatrix}
+$$
+
+#### Paso 2
+
+$$
+\begin{pmatrix}
+\color{blue}{a_{11}} && \color{blue}{a_{12}} \\
+a_{21} && a_{22}
+\end{pmatrix}
+
+\times 
+
+\begin{pmatrix}
+b_{11} && \color{blue}{b_{12}} \\
+b_{21} && \color{blue}{b_{22}}
+\end{pmatrix}
+
+=
+
+\begin{pmatrix}
+a_{11} · b_{11} + a_{12} · b_{21} && \textcolor{blue}{a_{11} · b_{12} + a_{12} · b_{22}} \\
+... && ...
+\end{pmatrix}
+$$
+
+#### Paso 3
+
+$$
+\begin{pmatrix}
+a_{11} && a_{12} \\
+\color{blue}{a_{21}} && \color{blue}{a_{22}}
+\end{pmatrix}
+
+\times 
+
+\begin{pmatrix}
+\color{blue}{b_{11}} && b_{12} \\
+\color{blue}{b_{21}} && b_{22}
+\end{pmatrix}
+
+=
+
+\begin{pmatrix}
+a_{11} · b_{11} + a_{12} · b_{21} && a_{11} · b_{12} + a_{12} · b_{22} \\
+\color{blue}{a_{21} · b_{11} + a_{22} · b_{21}} && ...
+\end{pmatrix}
+$$
+
+
+#### Paso 4
+
+$$
+\begin{pmatrix}
+a_{11} && a_{12} \\
+\color{blue}{a_{21}} && \color{blue}{a_{22}}
+\end{pmatrix}
+
+\times 
+
+\begin{pmatrix}
+b_{11} && \color{blue}{b_{12}} \\
+b_{21} && \color{blue}{b_{22}}
+\end{pmatrix}
+
+=
+
+\begin{pmatrix}
+a_{11} · b_{11} + a_{12} · b_{21} && a_{11} · b_{12} + a_{12} · b_{22} \\
+a_{21} · b_{11} + a_{22} · b_{21} && \color{blue}{a_{21} · b_{12} + a_{22} · b_{22}}
+\end{pmatrix}
+$$
+
+#### Representación final
+$$
+A · B = 
+\begin{pmatrix}
+a_{11} · b_{11} + a_{12} · b_{21} && a_{11} · b_{12} + a_{12} · b_{22} \\
+a_{21} · b_{11} + a_{22} · b_{21} && a_{21} · b_{12} + a_{22} · b_{22} 
+\end{pmatrix}
+$$

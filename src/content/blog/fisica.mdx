@@ -1,0 +1,50 @@
+---
+title: 'Física: Movimientos'
+description: 'Temas: MRU, MRUA, Tiro parabólico, Caída libre, MCU, MCUA'
+pubDate: '2026'
+heroImage: '../../assets/blog-placeholder-5.jpg'
+---
+import Exercise from "../../components/Exercise.astro";
+
+# MRU 
+
+El movimiento rectilíneo uniforme es aquel con una velocidad constante (no hay aceleración). Por ejemplo, un ejemplo de MRU sería un coche que va constantemente a 100km/h. 
+
+Las fórmulas necesarías del MRU son:
+
+$x = x_0 + vt$
+
+$v = cte.$
+
+<Exercise is:client>
+<span slot="problem-question">
+    Tenemos un coche con una velocidad constante de 120km/h. ¿Cuánto tiempo tardará en llegar a Malgrat de Mar, que está a 50km?
+</span>
+<span slot="problem-solution">
+
+    ###### Unidades SI
+
+    $120\frac{km}{h} · \frac{1000m}{1km} · \frac{1h}{3600s} = 33'33m/s$
+    
+    $50km · \frac{1000m}{1km} = 50.000m$
+
+    ###### Problema resuelto
+    $x = x_0+vt \Rightarrow 50.000 = 0 + 33'33t$
+
+    $t = \frac{50.000}{33'33} = 1500s \ tardará \ en \ llegar \ a \ Malgrat \ de \ Mar \ (25min)$
+
+</span>
+</Exercise>
+
+
+# MRUA 
+
+En este caso, el movimiento rectilíneo uniformemente acelerado, tiene una velocidad que varía y, consecutivamente, una aceleración. Un ejemplo de este sería un coche que pasa de ir a 120km/h a 80km/h en un autopista.
+
+$x = x_0 + v_0t + \frac{1}{2}at^2$
+
+$v = \frac{dx}{dt} = v_0 + at$
+
+$a = \frac{dv}{dt} = cte.$
+
+

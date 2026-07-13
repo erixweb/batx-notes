@@ -1,7 +1,17 @@
 {
   "name": "batx-notes",
-  "type": "module",
   "version": "0.0.1",
+  "dependencies": {
+    "@astrojs/mdx": "^7.0.2",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.3",
+    "@tailwindcss/vite": "^4.3.2",
+    "astro": "^7.0.7",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0",
+    "sharp": "^0.35.0",
+    "tailwindcss": "^4.3.2"
+  },
   "engines": {
     "node": ">=22.12.0"
   },
@@ -11,11 +21,8 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
-    "@astrojs/mdx": "^7.0.2",
-    "@astrojs/rss": "^4.0.19",
-    "@astrojs/sitemap": "^3.7.3",
-    "astro": "^7.0.7",
-    "sharp": "^0.35.0"
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^6"
   }
 }

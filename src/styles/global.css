@@ -3,6 +3,12 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
+* {
+	margin: auto;
+	padding: auto;
+	border-size: border-box;
+}
+
 
 :root {
 	--accent: #2337ff;
@@ -41,7 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0 0 0.5rem 0;
+	margin: 0rem 0rem 0.5rem 0rem;
 	color: rgb(var(--black));
 	line-height: 1.2;
 }
@@ -49,16 +55,18 @@ h1 {
 	font-size: 3.052em;
 }
 h2 {
-	font-size: 2.441em;
+	font-size: 32px;
 }
 h3 {
-	font-size: 1.953em;
+	padding-block: 30px 10px;
+	font-size: 26px;
 }
 h4 {
-	font-size: 1.563em;
+	padding-block: 20px 10px;
+	font-size: 23px;
 }
 h5 {
-	font-size: 1.25em;
+	font-size: 20px;
 }
 strong,
 b {
@@ -107,7 +115,7 @@ blockquote {
 	border-left: 4px solid var(--accent);
 	padding: 0 0 0 20px;
 	margin: 0;
-	font-size: 1.333em;
+	font-size: 1em;
 }
 hr {
 	border: none;
