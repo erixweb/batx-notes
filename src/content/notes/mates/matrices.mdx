@@ -1,9 +1,11 @@
 ---
-title: 'Mates: II Batx'
+title: 'Mates II: Matrices'
 description: 'Tewefewfwemas: MRU, MRUA, Tiro parabólico, Caída libre, MCU, MCUA'
 pubDate: '2026'
-heroImage: '../../assets/blog-placeholder-5.jpg'
+heroImage: '../../../assets/blog-placeholder-5.jpg'
 ---
+import Exercise from '../../../components/Exercise.astro'
+
 
 ## Matrices
 
@@ -105,7 +107,12 @@ $$
 
 ### Producto de una matriz con otra matriz
 
-Ejemplo con matriz 2x2
+Para hacer el producto de dos matrices estas deben cumplir la siguiente condición en sus dimensiones: la matriz A debe tener las dimensiones $a \times n$ (ej: 2x3) y la matriz B debe tener las dimensiones $n \times b$ (ej. 3x2).
+
+Es decir, no es posible calcular el producto entre una matriz C con dimensiones 3x4 y otra D con dimensiones 5x6.
+
+
+#### Cálculo del producto con matrices 2x2
 
 $$
 A = 
@@ -220,4 +227,78 @@ A · B =
 a_{11} · b_{11} + a_{12} · b_{21} && a_{11} · b_{12} + a_{12} · b_{22} \\
 a_{21} · b_{11} + a_{22} · b_{21} && a_{21} · b_{12} + a_{22} · b_{22} 
 \end{pmatrix}
+$$
+
+
+<Exercise>
+<span slot="problem-question">
+Dadas las siguientes matrices, calcula el producto de ambas.
+
+$$
+A = 
+\begin{pmatrix}
+4 && 2 \\
+7 && 1
+\end{pmatrix} \
+B = 
+\begin{pmatrix}
+9 && 1 \\
+3 && 5
+\end{pmatrix} 
+$$
+
+</span>
+<span slot="problem-solution">
+$$
+R =
+\begin{pmatrix}
+42 && 14 \\
+66 && 12
+\end{pmatrix} 
+$$
+</span>
+</Exercise>
+
+### Determinante
+
+El determinante es el valor escalar único que tiene una matriz determinada que se calcula a partir de los elementos de una matriz cuadrada ($a \times a$). Se representa de dos maneras posibles: $|A|$ o $det(A)$.
+
+#### Cálculo del determinante
+
+##### 1x1
+
+El determinante de una matriz 1x1 es el mismo número. 
+
+$A = (a_{11}) \rightarrow |A| = a_{11}$
+
+##### 2x2
+
+Para el determinante de una matriz 2x2, multiplicamos en cruz la diagonal principal y le restamos el resultado de multiplicar en cruz la diagonal secundaria:
+
+Para la diagonal principal: 
+$$
+A = 
+\begin{pmatrix}
+\color{blue}{a_{11}} && a_{12} \\
+a_{21} && \color{blue}{a_{22}}
+\end{pmatrix}
+\\
+|A| = a_{11} · a_{22} - ...
+$$
+
+Para la diagonal secundaria: 
+$$
+A = 
+\begin{pmatrix}
+a_{11} && \color{blue}{a_{12}} \\
+\color{blue}{a_{21}} && a_{22}
+\end{pmatrix}
+\\
+
+|A| = ... - a_{12} · a_{21}
+$$
+
+Por tanto, el módulo de la matriz A de dimensiones 2x2 es:
+$$
+|A| = a_{11} · a_{22} - a_{12} · a_{21}
 $$

@@ -8,6 +8,7 @@ import rehypeKatex from 'rehype-katex';
 
 import tailwindcss from '@tailwindcss/vite';
 
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://example.com',
@@ -39,6 +40,11 @@ export default defineConfig({
               ],
           },
       },
+      {
+            provider: fontProviders.fontsource(),
+            name: 'Source Serif Pro',
+            cssVariable: '--source-serif-pro',
+      }
 	],
 
   vite: {

@@ -1,7 +1,7 @@
 <div class="problem">
     <h5 style="padding: 0px; margin: 0px;">EJERCICIO</h5>
     <div class="problem-question">
-        <div>
+        <div style="width: 100%;">
             <slot name="problem-question" />
         </div>
         <div style="padding-left: 16px;
@@ -17,14 +17,6 @@
 <style>
 .problem-question {
     display: flex;
-    & span {
-        width: 100%;
-        margin-bottom: 0px;
-        & p {
-            margin-bottom: 0px;
-            max-width: fit-content;
-        }
-    }
     & button {
         padding: 6px 17px;
         font-weight: bold;

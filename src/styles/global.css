@@ -82,6 +82,8 @@ p {
 	margin-bottom: 1em;
 }
 .prose p {
+	font-family: --source-serif-pro;
+	font-weight: 500;
 	margin-bottom: 2em;
 }
 textarea {
