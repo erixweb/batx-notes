@@ -14,4 +14,4 @@ const notes = defineCollection({
     }),
 });
 
-export const collections = { notes }; // <- nombre "notes"
+export const collections = { notes }; 
