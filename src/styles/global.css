@@ -58,7 +58,9 @@ h2 {
 	font-size: 32px;
 }
 h3 {
-	padding-block: 30px 10px;
+	border-left: 2px solid black;
+	margin-block: 40px 10px;
+	padding-left: 10px;
 	font-size: 26px;
 }
 h4 {
