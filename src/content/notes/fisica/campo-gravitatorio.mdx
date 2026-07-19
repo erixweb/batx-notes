@@ -1,0 +1,72 @@
+---
+title: 'Física: Campo gravitatorio'
+description: 'Campo gravitatorio, ley de Kepler...'
+pubDate: '2026'
+---
+import Exercise from "../../../components/Exercise.astro";
+
+## Leyes de Kepler.
+
+### 1a ley de Kepler.
+
+Todos los planetas se mueven alrededor de su estrella en órbitas elípticas. El afelio es la posición más lejana y el perihelio la más cercana.
+
+### 2a ley de Kepler.
+
+La **velocidad areolar** con la que se mueven los planetas es constante. 
+
+> Velocidad areolar es el área de la órbita que completa un planeta entre el tiempo transcurrido. $v_A = \frac{\Delta A}{\Delta t} = cte.$
+
+> **Importante**: La velocidad de los planeta no es constante, es más alta cuando están cerca de la estrella. La diferencia es que la velocidad varía respecto al tiempo, pero no el área, esta última es siempre constante. $v = \frac{\Delta r}{\Delta t}$
+
+### 3a ley de Kepler.
+
+Para todos los planetas se cumple lo siguiente:
+
+$$
+\frac{T^2}{r^3} = cte.
+$$
+
+Aquí, $T$ $(s)$ es el período en el que el planeta da una vuelta a su estrella, y, $r$ $(m)$  es la distancia media del planeta respecto a su estrella.
+
+## Momento angular.
+
+El momento angular es el equivalente al momento lineal pero en una misma posición, cambiando el ángulo. Su fórmula es la siguiente:
+
+$$
+\vec{L} = \vec{r} \times \vec{p}
+$$
+Su módulo:
+$$
+L = r \ · m \ · v \ · sin(\alpha)
+$$
+
+$\vec{L}$ es el momento angular, que equivale al producto del vector posición por el momento lineal.
+
+En un movimiento circular, el ángulo es 90º, por tanto el seno será 1.
+
+### Conservación del momento angular.
+
+Al derivar el momento angular entre el tiempo, podemos ver que su variación es 0, es decir, el momento angular se conserva.
+
+$$
+\frac{d\vec{L}}{dt} = \vec{r} \times \vec{F} = 0
+$$
+
+Sin embargo, al derivarlo, obtenemos de resultado que $\vec{r} \times \vec{F}$ es igual a 0, pero sabemos que tanto hay una fuerza como una distancia entre el planeta y su estrella. Esto quiere decir que **$\vec{r}$ y $\vec{F}$ tienen la misma dirección**.
+
+### Relación momento angular y velocidad areolar.
+
+(Suponiendo un movimiento circular uniforme)
+
+Fórmula del momento angular:
+$$L = r · m · v$$
+
+Fórmula de la velocidad areolar. Se divide entre 2 ya que r y v forman un triángulo.
+$$\frac{dA}{dt} = \frac{1}{2}r · v$$
+
+En base a las fórmulas anteriores:
+$\frac{L}{m} = r · v$ y $\frac{d_A}{dt} = \frac{1}{2}r · v$. Por tanto:
+$$
+\frac{L}{2m} = \frac{dA}{dt}
+$$
